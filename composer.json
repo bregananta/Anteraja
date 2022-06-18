@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Bregananta\\Anteraja\\AnterajaBaseServiceProvider  "
+                "Bregananta\\Anteraja\\AnterajaBaseServiceProvider"
             ],
             "aliases": {
                 "Anteraja": "Bregananta\\Anteraja\\Facades\\Anteraja"
