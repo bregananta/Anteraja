@@ -2,11 +2,6 @@
     "name": "bregananta/anteraja",
     "description": "API Integration to Anteraja courier services.",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Bregananta\\Anteraja\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Kunto Bregananta Adi",
@@ -14,6 +9,30 @@
         }
     ],
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "orchestra/testbench": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bregananta\\Anteraja\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bregananta\\Anteraja\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bregananta\\Anteraja\\AnterajaBaseServiceProvider  "
+            ],
+            "aliases": {
+                "Anteraja": "Bregananta\\Anteraja\\Facades\\Anteraja"
+            }
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
     }
 }
